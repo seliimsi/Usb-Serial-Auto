@@ -1,11 +1,11 @@
 # USB Serial Auto
 
 
-[![tr](https://github.com/selimsii/Usb-Serial-Auto/blob/master/svg/tr.svg)](README_TR.md)
+[[tr](https://github.com/selimsii/Usb-Serial-Auto/blob/master/svg/tr.svg)](README_TR.md)
 
 ### By Selim Can ÖVÜR
 
-This repository is created for future projects that involve continuous USB device connections, primarily for communication with embedded systems equipped with serial chips. It is designed to support a specific product with a unique VendorId and ProductId, which can be customized to meet specific requirements.
+This repository is created for future projects that involve continuous USB device connections, primarily for communication with embedded systems equipped with serial chips. It is written to connect to a specific usb device with a unique VendorId and ProductId.
 
 ## Technical
 Gradle Version --> 8.0

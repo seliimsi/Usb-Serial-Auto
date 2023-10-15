@@ -1,11 +1,11 @@
 # USB Serial Auto
 
 
-[![en](https://github.com/selimsii/Usb-Serial-Auto/blob/master/svg/en.svg)](README.md)
+[[EN](https://github.com/selimsii/Usb-Serial-Auto/blob/master/svg/en.svg)](README.md)
 
 ### Yazan Selim Can ÖVÜR
 
-Bu repo, öncelikle seri çiplerle donatılmış gömülü sistemlerle iletişim için sürekli USB cihaz bağlantılarını içeren gelecekteki projeler için oluşturulmuştur. Belirli gereksinimleri karşılamak üzere özelleştirilebilen benzersiz bir VendorId ve ProductId ile belirli bir ürünü desteklemek üzere tasarlanmıştır.
+Bu repo, seri haberleşme çipleri bulunduran gömülü sistemlerle iletişim için sürekli USB cihaz bağlantılarını gerektiren gelecekteki projeler için oluşturulmuştur. Tek bir ürüne özgü benzersiz bir VendorId ve ProductId ile cihaza bağlanabilmek için tasarlanmıştır.
 
 ## Teknik
 Gradle Versiyonu --> 8.0
@@ -40,7 +40,7 @@ Gradle Versiyonu --> 8.0
 2) Bir USB cihazı programda belirtilen belirli bir VendorId ve ProductId ile her bağlandığında, servis uygulaması başlatılır ve cihaza bağlanarak ve bir bağlantı arayüzü almak için devreye girer ve iletişimi yapılandırır.
 3) Ana servis veya ana aktivite sınıfının mevcut contexti, statik context tutucu bir sınıfa setlenerek diğer sınıflar arasında paylaşılır.
 
-**Tetikleyici Intentler**
+**Başlatıcı ve Durdurucu Intentler**
 ```Java
 <intent-filter>
      <action android:name="com.example.usb_serial_auto.START_COMMAND" />
