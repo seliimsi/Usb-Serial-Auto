@@ -25,7 +25,7 @@ public class StartReceiver extends BroadcastReceiver {
     }
 
     public void startHelloService(Context context) {
-        Intent intent = new Intent(context,C4_VMC_Service.class);
+        Intent intent = new Intent(context,Service_.class);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             context.startForegroundService(intent);
         } else {
@@ -33,7 +33,7 @@ public class StartReceiver extends BroadcastReceiver {
         }
     }
     public void stopHelloService() {
-        Intent intent = new Intent(AppContextManager.getInstance().getAppContext(),C4_VMC_Service.class);
+        Intent intent = new Intent(AppContextManager.getInstance().getAppContext(),Service_.class);
         AppContextManager.getInstance().getAppContext().stopService(intent);
     }
 }

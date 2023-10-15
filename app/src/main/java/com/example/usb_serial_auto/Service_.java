@@ -7,7 +7,7 @@ import android.os.IBinder;
 
 
 
-public class C4_VMC_Service extends Service {
+public class Service_ extends Service {
     private static UsbReceiver usbReceiver;
 
     @Override
@@ -18,7 +18,7 @@ public class C4_VMC_Service extends Service {
 
     @Override
     public void onCreate() {
-        Intent intent = new Intent(this, C4_VMC_Service.class);
+        Intent intent = new Intent(this, Service_.class);
         startService(intent);
 
         AppContextManager.getInstance().setAppContext(this);
@@ -35,7 +35,7 @@ public class C4_VMC_Service extends Service {
 
         usbReceiver.disconnectDevice();
         usbReceiver.closePort();
-    } 
+    }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {

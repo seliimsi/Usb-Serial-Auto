@@ -21,7 +21,7 @@
         android:theme="@style/Theme.USB_Serial_Auto"
         tools:targetApi="31">
         <meta-data
-            android:name="com.example.c4vmcservice"
+            android:name="com.example.usb_serial_auto"
             android:resource="@layout/activity_main" />
 
         <receiver
@@ -47,7 +47,7 @@
 
 
         <service
-            android:name=".C4_VMC_Service"
+            android:name=".Service_"
             android:foregroundServiceType="location"
             android:enabled="true"
             android:exported="false" />
