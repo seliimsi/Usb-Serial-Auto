@@ -1,7 +1,7 @@
 # USB Serial Auto
 
 
-**EN**[![EN](https://github.com/selimsii/Usb-Serial-Auto/blob/master/svg/en.svg)](README.md)
+[![EN](https://github.com/selimsii/Usb-Serial-Auto/blob/master/svg/en.svg)](README.md)
 
 ### Yazan Selim Can ÖVÜR
 
