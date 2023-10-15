@@ -54,7 +54,12 @@ public class Permission extends Communicate{
         this.context.unregisterReceiver(usbPermissionReceiver);
     }
 
-
+    public void setCommunicationParams(int baudRate, int stopBits, int dataBits, int parityBit){
+        this.baudRate=baudRate;
+        this.stopBit=stopBits;
+        this.dataBits=dataBits;
+        this.parityBit=parityBit;
+    }
 
 
     private BroadcastReceiver usbPermissionReceiver = new BroadcastReceiver() {

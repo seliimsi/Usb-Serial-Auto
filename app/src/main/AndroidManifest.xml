@@ -39,8 +39,8 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.example.c4vmcservice.START_COMMAND" />
-                <action android:name="com.example.c4vmcservice.STOP_COMMAND" />
+                <action android:name="com.example.usb_serial_auto.START_COMMAND" />
+                <action android:name="com.example.usb_serial_auto.STOP_COMMAND" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>

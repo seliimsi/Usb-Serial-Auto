@@ -18,8 +18,8 @@ public class UsbReceiver{
     private HashMap<String, UsbDevice> usbDevices;
     private int productId;
     private String deviceName;
-    private static final int VendorId=6790;
-    private static final int ProductId=29987;
+    private static final int VendorId=6740;
+    private static final int ProductId=22475;
 
 
     public UsbReceiver(){
@@ -53,7 +53,7 @@ public class UsbReceiver{
     public  ArrayList<UsbDevice> getConnectedDevices(){
         return connectedDevices;
     }
-    public void addConnectedDevice(UsbDevice sample){
+    private void addConnectedDevice(UsbDevice sample){
         connectedDevices.add(sample);
     }
     public void closePort(){this.permission.closePort();}
@@ -67,6 +67,9 @@ public class UsbReceiver{
     }
     public String readHex(){
         return this.permission.getRead();
+    }
+    public void setComParams(int baudRate,int parityBit,int databits, int stopBit){
+        this.permission.setCommunicationParams(baudRate,stopBit,databits,parityBit);
     }
 
 }

@@ -11,11 +11,11 @@ public class StartReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-     if (intent.getAction() != null && intent.getAction().equals("com.example.c4vmcservice.START_COMMAND")||Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
+     if (intent.getAction() != null && intent.getAction().equals("com.example.usb_serial_auto.START_COMMAND")||Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
          startHelloService(context);
          Log.d("Receiver","Receiver has been triggered.");
         }
-        else if(intent.getAction() != null && intent.getAction().equals("com.example.c4vmcservice.STOP_COMMAND")) {
+        else if(intent.getAction() != null && intent.getAction().equals("com.example.usb_serial_auto.STOP_COMMAND")) {
             stopHelloService();
             Log.d("Intent","Intent null");
         }

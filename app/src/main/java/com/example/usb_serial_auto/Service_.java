@@ -4,7 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-
+import com.hoho.android.usbserial.driver.UsbSerialPort;
 
 
 public class Service_ extends Service {
@@ -27,6 +27,7 @@ public class Service_ extends Service {
         //Creating an instance of UsbReceiver object
         usbReceiver=new UsbReceiver();
         usbReceiver.InitialConnection();
+        usbReceiver.setComParams(9600,0,8, 1);
     }
 
     @Override

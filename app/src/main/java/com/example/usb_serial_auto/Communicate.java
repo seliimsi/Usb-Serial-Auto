@@ -28,6 +28,11 @@ public class Communicate {
     protected UsbSerialDriver driver;
     protected UsbSerialPort port;
     protected byte[] buffer=new byte[1024];
+    protected int baudRate;
+    protected int parityBit;
+    protected int stopBit;
+    protected int dataBits;
+
 
     Communicate(UsbDevice selectedDevice, UsbManager usbManager){
         this.selectedDevice=selectedDevice;
@@ -101,8 +106,6 @@ public class Communicate {
             System.out.println("Sending failed");
         }
 
-        Thread.sleep(2500);
-        readHex();
     }
 
     private void readHex(){
@@ -125,6 +128,7 @@ public class Communicate {
 
 
     public String getRead(){
+        readHex();
         String sample=byteArrayToHexString(buffer);
         int indexofD=sample.indexOf('D')+1;
         return sample.substring(0, indexofD + 1);
@@ -137,7 +141,7 @@ public class Communicate {
             throw new RuntimeException(e);
         }
         try {
-            this.port.setParameters(9600,8,UsbSerialPort.STOPBITS_1,UsbSerialPort.PARITY_NONE);
+            this.port.setParameters(baudRate,dataBits,stopBit,parityBit);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
