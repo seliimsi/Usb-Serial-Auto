@@ -1,7 +1,7 @@
 # USB Serial Auto
 
 
-[[tr](https://github.com/selimsii/Usb-Serial-Auto/blob/master/svg/tr.svg)](README_TR.md)
+[![TR](https://github.com/selimsii/Usb-Serial-Auto/blob/master/svg/tr.svg)](README_TR.md)
 
 ### By Selim Can ÖVÜR
 
