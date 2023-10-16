@@ -32,7 +32,7 @@ Gradle Versiyonu --> 8.0
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-''''
+```
 
 ### Açıklama
 
@@ -47,26 +47,26 @@ Gradle Versiyonu --> 8.0
     <action android:name="com.example.usb_serial_auto.STOP_COMMAND" />
     <action android:name="android.intent.action.BOOT_COMPLETED" />
 </intent-filter>
-''''
+```
 **Hizmeti adb ile başlatmak için:**
    - 1) Terminal üzerinden usb hata ayıklaması yapılmış android cihazları bulun:
-''''
+```
        -adb devices
-''''
+```
    - 2) Cihaz adını bulduktan sonra şunu deneyin:
-''''
+```
        am broadcast -a com.example.usb_serial_auto.STOP_COMMAND -n com.example.usb_serial_auto/.StartReceiver
-''''
+```
 
 **Hizmeti adb ile durdurmak için:**
   - 1) Terminal üzerinden usb hata ayıklaması yapılmış android cihazları bulun:
-''''
+```
        -adb devices
-''''
+```
    - 2) Cihaz adını bulduktan sonra şunu deneyin:
-''''
+```
        am broadcast -a com.example.usb_serial_auto.STOP_COMMAND -n com.example.usb_serial_auto/.StartReceiver
-''''
+```
 **!!!!Ayrıca; usb cihazını çıkardığınızda hizmet duracaktır.**
   
 ## Kullanım
@@ -74,7 +74,7 @@ Gradle Versiyonu --> 8.0
 ### 1) usbReceiver sınıfının bir örneğini oluşturun
 ```Java
 private static UsbReceiver usbReceiver;
-''''
+```
 
 ### 2)
 ### +Activity veya servis sınıfınızın onCreate yönteminde oluşturulan usbReceiver nesnesini başlatın ve UsbReceiver.InitialConnection() yöntemiyle ön bağlantı ayarlarını yapılandırın.
@@ -94,7 +94,7 @@ private static UsbReceiver usbReceiver;
         usbReceiver.InitialConnection();
         usbReceiver.setComParams(9600,0,8, 1); //default baudRate:9600 parityBit:None, dataBits:8 bits, stopBit:1
     }
-''''
+```
 ### 3) disconnectDevice() ve closePort() metodlarını activity veya servis sınıfınızın onDestroy() yöntemine ekleyin
 ```Java
   @Override
@@ -104,7 +104,7 @@ private static UsbReceiver usbReceiver;
         usbReceiver.disconnectDevice();
         usbReceiver.closePort();
     }
-''''
+```
 ### 4) Son olarak yöntemleri kullanmaya hazırız:
 + public String UsbReceiver.readHex() --> Bağlı cihazdan gelen mesajın onaltılık değerini döndürür
 + public void UsbReceiver.sendHex(String hexData) --> Bağlı cihaza onaltılık bir String gönderir
